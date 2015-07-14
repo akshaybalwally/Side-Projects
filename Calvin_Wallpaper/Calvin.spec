@@ -1,6 +1,6 @@
 # -*- mode: python -*-
 a = Analysis(['Calvin.py'],
-             pathex=['/home/akshay/SideProjects'],
+             pathex=['/home/akshay/SideProjects/Calvin_Wallpaper'],
              hiddenimports=[],
              hookspath=None,
              runtime_hooks=None)

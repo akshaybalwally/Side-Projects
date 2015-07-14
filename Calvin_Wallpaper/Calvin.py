@@ -30,10 +30,11 @@ else:
 
 	os.chdir(curr_path + '/CalvinHobbesPictures/')  # set where files download to
 	for string in wallpaperNames:
+	    print 1
 	    
 	    try:
 	        comicName = str("CalvinWallpaper_"+str(comicCounter))
-	        url = str("http://unrealitymag.bcmediagroup.netdna-cdn.com/wp-content/uploads/2011/09/"+str(wallpaperNames[comicCounter])+".jpg")  # string containing the file name
+	        url = str("http://unrealitymag.bcmediagroup.netdna-cdn.com/wp-content/uploads/2011/09/"+string+".jpg")  # string containing the file name
 	        comicCounter+=1  # increments the comic counter to go to the next comic, must be before the download in case the download raises an exception
 	        download_comic(url,comicName)  # uses the function defined above to download the comic
 	        print url
@@ -42,7 +43,7 @@ else:
 	        errorCount+=1  # add one to the error count
 	        
         else:
-            print str("comic"+ ' ' + str(comicCounter) + wallpaperNames[comicCounter]+' ' + "does not exist")  # otherwise say that the certain comic number doesn't exist
+            print str("comic"+ ' ' + str(comicCounter) + string+' ' + "does not exist")  # otherwise say that the certain comic number doesn't exist
 	print "comics created"  # prints if all comics are downloaded
 numPics = len(os.listdir('.'))
 random.seed()
